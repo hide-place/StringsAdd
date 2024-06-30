@@ -1,5 +1,7 @@
 
-# Title Case Converter
+
+# *StringsAdd* 
+## `titleCase` :  
 
 This Dart function converts a string to title case, where the first letter of each word is capitalized.
 
@@ -49,7 +51,6 @@ String titleCase(String inputString) {
 
 This code is open source and available under the [MIT License](LICENSE.md).
 
-```
 
-Feel free to use this function in your Dart projects and modify it as needed. Contributions and feedback are welcome!
-```
+
+Feel free to use this function in your Dart projects and modify it as needed. [Contributions](CONTRIBUTING.md)  and feedback are welcome!
