@@ -1,7 +1,7 @@
 
 
 # *StringsAdd* 
-## `titleCase` :  
+## `titleCase()` :  
 
 This Dart function converts a string to title case, where the first letter of each word is capitalized.
 
