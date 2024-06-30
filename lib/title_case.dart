@@ -7,10 +7,15 @@
 /// ```
 
 String titleCase(String inputString) {
-  // Split the input string into a list of words
-  List<String> wordsList = inputString.split(' ');
   
-  // List to store the new words with capitalized first letters
+ 
+  if(inputString.trim() == ''){
+    return '';
+  }
+  else{
+    // Split the input string into a list of words
+  List<String> wordsList = inputString.trim().split(' ');
+   // List to store the new words with capitalized first letters
   List<String> capitalizedWordsList = [];
 
   // Iterate over each word in the list
@@ -24,5 +29,7 @@ String titleCase(String inputString) {
   // Join the capitalized words into a single string with spaces
   String titleCasedString = capitalizedWordsList.join(' ');
 
-  return titleCasedString;
+  return titleCasedString; 
+  }
+  
 }

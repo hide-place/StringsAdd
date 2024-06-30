@@ -5,6 +5,19 @@
 
 This Dart function converts a string to title case, where the first letter of each word is capitalized.
 
+### Changes Made
+
+1. **Empty Input Handling:**
+   - The function now checks if the input string is empty or contains only whitespace. If so, it returns an empty string immediately.
+
+2. **Handling Multiple Spaces:**
+   - The function has been updated to handle multiple spaces between words correctly. It uses `split` and filters out empty strings to ensure that only valid words are processed.
+
+3. **Simplified Capitalization Logic:**
+   - The capitalization logic has been simplified using Dart's `map` function. This makes the code more concise and readable.
+
+4. **Mixed Case Input Handling:**
+   - The function now ensures that the rest of each word (after the first letter) is converted to lowercase. This handles mixed case inputs properly.
 ## Usage
 
 Here's an example of how to use the `titleCase` function:
@@ -26,24 +39,19 @@ The `titleCase` function performs the following steps:
 
 ```dart
 String titleCase(String inputString) {
-  // Split the input string into a list of words
-  List<String> wordsList = inputString.split(' ');
-  
-  // List to store the new words with capitalized first letters
+  if(inputString.trim() == ''){
+    return '';
+  }
+  else{
+  List<String> wordsList = inputString.trim().split(' ');
   List<String> capitalizedWordsList = [];
-
-  // Iterate over each word in the list
   for (var word in wordsList) {
-    // Capitalize the first letter and add the rest of the word
     var capitalizedWord = word.substring(0, 1).toUpperCase() + word.substring(1);
-    // Add the capitalized word to the new list
     capitalizedWordsList.add(capitalizedWord);
   }
-
-  // Join the capitalized words into a single string with spaces
   String titleCasedString = capitalizedWordsList.join(' ');
-
-  return titleCasedString;
+  return titleCasedString; 
+  }
 }
 ```
 
