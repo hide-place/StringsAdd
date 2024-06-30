@@ -18,7 +18,7 @@ This Dart function converts a string to title case, where the first letter of ea
 
 4. **Mixed Case Input Handling:**
    - The function now ensures that the rest of each word (after the first letter) is converted to lowercase. This handles mixed case inputs properly.
-## Usage
+### Usage
 
 Here's an example of how to use the `titleCase` function:
 
@@ -27,7 +27,7 @@ String title = titleCase("this is an example string");
 print(title); // This Is An Example String
 ```
 
-## Function Explanation
+### Function Explanation
 
 The `titleCase` function performs the following steps:
 
@@ -35,7 +35,7 @@ The `titleCase` function performs the following steps:
 2. Iterates over each word, capitalizes the first letter, and adds it to a new list.
 3. Joins the capitalized words into a single string with spaces.
 
-### Code
+#### Code
 
 ```dart
 String titleCase(String inputString) {
